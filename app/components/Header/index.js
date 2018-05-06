@@ -1,9 +1,8 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-
+import { Flex, Box } from 'grid-styled'
+import { HeaderWrapper } from './HeaderWrapper'
 import A from './A';
 import Img from './Img';
-import NavBar from './NavBar';
 import HeaderLink from './HeaderLink';
 import Banner from './banner.jpg';
 import messages from './messages';
@@ -11,19 +10,24 @@ import messages from './messages';
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
-        <A href="https://twitter.com/mxstbr">
-          <Img src={Banner} alt="react-boilerplate - Logo" />
-        </A>
-        <NavBar>
+      <Flex
+        alignItems='flex-end'
+        mt={40}
+      >
+        <Box width={3/8}>
+          Never gonna give you up
+        </Box>
+        <Box width={2/8}>
           <HeaderLink to="/">
-            <FormattedMessage {...messages.home} />
+            Link to some user Profile or something
           </HeaderLink>
-          <HeaderLink to="/features">
-            <FormattedMessage {...messages.features} />
-          </HeaderLink>
-        </NavBar>
-      </div>
+        </Box>
+        <Box width={3/8}>
+          <A href="https://twitter.com/mxstbr">
+            <Img src={Banner} alt="react-boilerplate - Logo" />
+          </A>
+        </Box>
+      </Flex>
     );
   }
 }
