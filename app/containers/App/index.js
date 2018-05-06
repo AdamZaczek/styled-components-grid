@@ -18,6 +18,8 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 
 const AppWrapper = styled.div`
+  background-color: black;
+  color: white;
   max-width: calc(768px + 16px * 2);
   margin: 0 auto;
   display: flex;
